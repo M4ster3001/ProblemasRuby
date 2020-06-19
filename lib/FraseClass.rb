@@ -12,7 +12,7 @@ class Frase
 
         count = 0
 
-        input = input.downcase
+        input = input.downcase.gsub(/[^a-z\s]/, "")
 
         while count < input.length do
 
@@ -29,7 +29,7 @@ class Frase
             count += 1
         end
 
-        return [vowels], "\n"
+        return [vowels]
 
     end
 end
