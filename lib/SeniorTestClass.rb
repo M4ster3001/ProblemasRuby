@@ -13,24 +13,29 @@ class SeniorTest
         end
     end
 
-    def compareSkills( skills )
+    def scaleSkills( skills )
         
         total_skills = 0
 
-        skills.each do | name, value |
-            
-            if value >= 0 && value <= 5
-                total_skills += value
-            end
-        end
+        if skills.length > 0 
 
-        case 
-            when total_skills <= 7
-                puts "Junior - Pontuação(#{total_skills} pontos) "
-            when total_skills > 7 && total_skills <= 11
-                puts "Pleno - Pontuação(#{total_skills} pontos) "
-            else
-                puts "Sênior - Pontuação(#{total_skills} pontos) "
+            skills.each do | name, value |
+                
+                value = value.to_i
+                if value >= 0 && value <= 5
+                    total_skills += value
+                end
+            end
+
+            case 
+                when total_skills <= 7
+                    puts "Junior - Pontuação(#{total_skills} pontos)"
+                when total_skills > 7 && total_skills <= 11
+                    puts "Pleno - Pontuação(#{total_skills} pontos)"
+                else
+                    puts "Sênior - Pontuação(#{total_skills} pontos)"
+            end
+
         end
 
     end
