@@ -2,6 +2,7 @@
 Iniciando projeto frases
 
  - TESTES
+    - os testes estão na pasta spec
     - para executar os testes digite rspec
 
  - Problema 1: Cria uma classe "SeniorTest" que irá avaliar a senioridade de um desenvolvedor,
