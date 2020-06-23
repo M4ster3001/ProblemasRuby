@@ -29,11 +29,11 @@ class SeniorTest
 
             case 
                 when total_skills <= 7
-                    puts "Junior - Pontuação(#{total_skills} pontos)"
+                    return "Junior - Pontuação(#{total_skills} pontos)"
                 when total_skills > 7 && total_skills <= 11
-                    puts "Pleno - Pontuação(#{total_skills} pontos)"
+                    return "Pleno - Pontuação(#{total_skills} pontos)"
                 else
-                    puts "Sênior - Pontuação(#{total_skills} pontos)"
+                    return "Sênior - Pontuação(#{total_skills} pontos)"
             end
 
         end
