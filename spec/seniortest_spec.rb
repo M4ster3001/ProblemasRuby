@@ -29,6 +29,7 @@ describe SeniorTest do
 
             teste = seniorTest.scaleSkills({ ruby: 2, db: 3, agile: 2, pattern: 1, server: 2 })
             expect(teste).to eq("Pleno - Pontuação(10 pontos)")
+
             #expect do
             #    seniorTest.scaleSkills({ ruby: 2, db: 3, agile: 2, pattern: 1, server: 2 })
             #end.to output("Pleno - Pontuação(10 pontos)\n").to_stdout
@@ -36,8 +37,8 @@ describe SeniorTest do
 
         it "Testando a pontuação com uma string" do
 
-            teste = seniorTest.scaleSkills({ ruby: 2, db: 3, agile: 2, pattern: 1, server: 2 })
-            expect(teste).to eq("Pleno - Pontuação(10 pontos)")
+            teste = seniorTest.scaleSkills({ ruby: 'teste', db: 3, agile: 2, pattern: 1, server: 2 })
+            expect(teste).to eq("Pleno - Pontuação(8 pontos)")
 
             #expect do
                 #considera a string como 0
